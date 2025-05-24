@@ -220,6 +220,8 @@ import { DrawerModule } from 'primeng/drawer';
   standalone: true,
   templateUrl: './base.component.html',
   styleUrl: './base.component.scss',
+  providers: [MessageService, TerminalService],
+  
 })
 export class BaseComponent {
   displayTerminal!: boolean ;

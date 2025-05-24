@@ -13,5 +13,5 @@ import { TerminalService } from 'primeng/terminal';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title = 'clientTwist';
+  // title = 'clientTwist';
 }
