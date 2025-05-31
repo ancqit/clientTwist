@@ -4,7 +4,6 @@ import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
-
 })
 /**
  * Service for handling language translation in the application.
