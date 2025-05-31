@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { TranslateService } from './Services/translate-service'; // Import the service
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,14 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.scss'
 })
 export class App {
+  /**
+   * Initializes the App component and loads translations at startup.
+   * 
+   * @param translateService - Service responsible for handling translations and caching them.
+   */
+  constructor(private translateService: TranslateService) {
+    this.translateService.loadAndCacheTranslations(); // Load translations at app startup
+  }
   // This is the main application component.
   // It serves as the root component for the Angular application.
   // The RouterOutlet directive is used to display routed components.

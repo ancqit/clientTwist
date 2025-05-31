@@ -1,12 +1,16 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import { TranslateService } from '../Services/translate-service';
+import { Observable } from 'rxjs';
 
 @Pipe({
-  name: 'translation'
+  name: 'translation',
+  pure: false
 })
 export class TranslationPipe implements PipeTransform {
+  constructor(private translateService: TranslateService) {}
 
-  transform(value: unknown, ...args: unknown[]): unknown {
-    return null;
+  transform(key: string): string {
+    return this.translateService.getValueByKey(key);
+    // return this.translateService.getKeyByValues(key);
   }
-
 }
