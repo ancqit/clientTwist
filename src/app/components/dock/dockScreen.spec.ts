@@ -6,6 +6,8 @@ import { FormsModule } from '@angular/forms';
 import { Dock } from 'primeng/dock';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { TooltipModule } from 'primeng/tooltip';
+import { provideRouter, RouterModule } from '@angular/router';
+import { RouterTestingHarness, RouterTestingModule } from '@angular/router/testing';
 
 describe('Dock', () => {
   let component: DockScreen;
@@ -13,7 +15,8 @@ describe('Dock', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [DockScreen,Dock, RadioButtonModule, CommonModule, FormsModule, TooltipModule]
+      imports: [DockScreen,Dock, RadioButtonModule, CommonModule, FormsModule, TooltipModule],
+      providers: [provideRouter([])], 
     })
     .compileComponents();
 
