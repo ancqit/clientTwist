@@ -1,6 +1,14 @@
 
 <!-- <app-dock></app-dock> -->
+ <div class="container">
+<button (click)="changeLanguage('en')">English</button>
+<button (click)="changeLanguage('fr')">French</button>
+<button (click)="changeLanguage('esp')">Spanish</button>
+<button (click)="changeLanguage('de')">german</button>
+ </div>
 
-
-
+@if(showChild){
 <router-outlet />
+
+
+}
