@@ -56,7 +56,7 @@ export class DockScreen implements OnInit {
                 icon: 'https://primefaces.org/cdn/primeng/images/dock/photos.svg'
             },
             {
-                routerLink:'not-found',
+                routerLink:'/stepper',
                 label: 'Trash',
                 icon: 'https://primefaces.org/cdn/primeng/images/dock/trash.png'
             }

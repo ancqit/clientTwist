@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '../../Services/translate-service';
 import { TranslationPipe } from '../../shared/translation-pipe';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-translate-screen',
   templateUrl: './translate-screen.html',
   styleUrl: './translate-screen.scss',
   standalone: true,
-  imports: [TranslationPipe]
+  imports: [TranslationPipe,RouterModule]
 })
 export class TranslateScreen {
   test: string | undefined;
