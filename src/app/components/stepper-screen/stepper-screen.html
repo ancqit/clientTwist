@@ -1,28 +1,50 @@
 <mat-stepper orientation="vertical" linear>
-  <mat-step label="Step 1">
-    <p>Put down your phones.</p>
-    <div>
-      <button mat-button matStepperNext>Next</button>
-    </div>
-  </mat-step>
-  <mat-step label="Step 2">
-    <p>Socialize with each other.</p>
-    <div>
-      <button mat-button matStepperPrevious>Back</button>
-      <button mat-button matStepperNext>Next</button>
-    </div>
-  </mat-step>
-  <mat-step label="Step 3">
-    <p>You're welcome.</p>
-    <div>
-      <button mat-button matStepperPrevious>Back</button>
-      <button mat-button matStepperNext>Next</button>
-    </div>
-  </mat-step>
-  <mat-step label="Step 4">
-    <p>Enjoy your time together.</p>
-    <div>
-      <button mat-button matStepperPrevious>Back</button>
-    </div>
-  </mat-step>
+    <mat-step [label]="'Step_1' | translation">
+        <p>
+            {{'PUT_DOWN_YOUR_PHONES'|translation}}
+        </p>
+        <div>
+            <button mat-button matStepperNext>
+                {{'NEXT'|translation}}
+            </button>
+        </div>
+    </mat-step>
+    <mat-step [label]="'Step_2' | translation">
+        <p>
+            {{ 'SOCIALIZE_WITH_OTHERS' |translation }}
+        </p>
+        <div>
+            <button mat-button matStepperPrevious>
+                {{'BACK'| translation }}
+            </button>
+            <button mat-button matStepperNext>
+                {{'NEXT'|translation}}
+            </button>
+        </div>
+    </mat-step>
+    <mat-step [label]="'Step_3' | translation">
+        <p>
+            {{'YOUR_WELCOME'|translation}}
+        </p>
+        <div>
+            <button mat-button matStepperPrevious>
+                {{'BACK'| translation }}
+            </button>
+            <button mat-button matStepperNext>
+                {{'NEXT'|translation}}
+            </button>
+        </div>
+    </mat-step>
+    <mat-step [label]="'Step_1' | translation">
+        <p>
+            {{'ENJOY_YOUR_TIME_TOGETHER'|translation}}
+        </p>
+        <div>
+            <button mat-button matStepperPrevious>
+                {{'BACK'| translation }}
+            </button>
+        </div>
+    </mat-step>
 </mat-stepper>
+
+<button [routerLink]="'/dock'">Dock</button>
