@@ -25,7 +25,6 @@ export class ToastScreen implements OnInit {
   ngOnInit() {
     this.toastService.getToast().subscribe(message => {
       // Handle the toast message here
-      console.log('Toast message:', message);
       this.showToast();
       // e.g., show a toast notification
     });

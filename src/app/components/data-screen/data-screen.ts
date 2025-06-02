@@ -16,7 +16,6 @@ export class DataScreen {
 trigger() {
     // This method can be used to trigger a toast notification
     // You can implement the logic to show a toast here
-    console.log('Toast triggered');
     this.toastService.emitToast('Hello from another component!');
   }
 }

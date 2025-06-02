@@ -10,12 +10,10 @@ export class ToastService {
   constructor() { }
 
   emitToast(message: string): void {
-    console.log('Toast message emitted:', message);
     this.toastSubject.next(message);
   }
 
   getToast(): Observable<string> {
-    console.log('Toast message requested');
     return this.toastSubject.asObservable();
   }
 }
