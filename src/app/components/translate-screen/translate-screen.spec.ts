@@ -4,6 +4,7 @@ import { TranslateScreen } from './translate-screen';
 import { TranslationPipe } from '../../shared/translation-pipe';
 import { provideHttpClient } from '@angular/common/http';
 import { provideHttpClientTesting } from '@angular/common/http/testing';
+import { provideRouter, RouterModule } from '@angular/router';
 
 describe('TranslateScreen', () => {
   let component: TranslateScreen;
@@ -11,7 +12,7 @@ describe('TranslateScreen', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TranslateScreen,TranslationPipe],
+      imports: [TranslateScreen,TranslationPipe,RouterModule.forRoot([])], // Provide an empty router configuration
       providers: [
         provideHttpClient(),
         provideHttpClientTesting() // Add HttpClientTestingModule for testing
