@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { ToastScreen } from "../../shared/toast-screen/toast-screen";
 import { ToastService } from '../../Services/toast-service';
+import { MatTabsModule } from '@angular/material/tabs';
 
 @Component({
   selector: 'app-data-screen',
-  imports: [RouterModule, ToastScreen],
+  imports: [RouterModule, ToastScreen,MatTabsModule],
   templateUrl: './data-screen.html',
   styleUrl: './data-screen.scss',
   standalone: true,

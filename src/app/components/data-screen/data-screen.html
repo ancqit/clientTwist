@@ -1,5 +1,21 @@
-<p>data-screen works!</p>
-<app-toast-screen></app-toast-screen>
-
-<button [routerLink]="'/dock'">Dock</button>
-<button (click)="trigger()">Trigger</button>
+<mat-tab-group headerPosition="below">
+    <mat-tab label="First"> Content 1
+        <div class="example-large-box mat-elevation-z4">
+            <p>data-screen works!</p>
+            <app-toast-screen></app-toast-screen>
+            <button [routerLink]="'/dock'">Dock</button>
+            <br />
+            <button (click)="trigger()">Trigger</button>
+        </div>
+    </mat-tab>
+    <mat-tab label="Second"> Content 2
+        <div class="example-large-box mat-elevation-z4">
+            Large content
+        </div>
+    </mat-tab>
+    <mat-tab label="Third"> Content 3
+        <div class="example-large-box mat-elevation-z4">
+            Large content
+        </div>
+    </mat-tab>
+</mat-tab-group>
