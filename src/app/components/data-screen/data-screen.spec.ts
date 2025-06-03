@@ -6,6 +6,7 @@ import { ToastService } from '../../Services/toast-service';
 import { ToastScreen } from '../../shared/toast-screen/toast-screen';
 import { provideHttpClient } from '@angular/common/http';
 import { provideHttpClientTesting } from '@angular/common/http/testing';
+import { MatTabsModule } from '@angular/material/tabs';
 
 describe('DataScreen', () => {
   let component: DataScreen;
@@ -13,7 +14,7 @@ describe('DataScreen', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [DataScreen, RouterModule, ToastScreen],
+      imports: [DataScreen, RouterModule, ToastScreen,MatTabsModule],
       providers: [ToastService,       
         provideRouter([]),
         provideHttpClient(),
