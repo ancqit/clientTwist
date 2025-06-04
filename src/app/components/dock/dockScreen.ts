@@ -14,11 +14,43 @@ import { RouterModule } from '@angular/router';
   styleUrl: './dockScreen.scss',
   standalone: true,
 })
+
+
+
+
+
 export class DockScreen implements OnInit {
+/**
+ * An array of menu items to be displayed in the dock.
+ * 
+ * @remarks
+ * This property may be undefined if no menu items are available.
+ *
+ * @type {MenuItem[] | undefined}
+ */
    items: MenuItem[] | undefined;
 
+    /**
+     * Specifies the position of the dock on the screen.
+     * 
+     * Possible values are:
+     * - `'left'`: Dock is positioned on the left side.
+     * - `'right'`: Dock is positioned on the right side.
+     * - `'top'`: Dock is positioned at the top.
+     * - `'bottom'`: Dock is positioned at the bottom (default).
+     */
     position: 'left' | 'right' | 'top' | 'bottom' = 'bottom';
 
+    /**
+     * An array of position option objects for the dock screen component.
+     * Each option contains a `label` for display and a `value` representing the dock position.
+     *
+     * Possible positions:
+     * - 'Bottom'
+     * - 'Top'
+     * - 'Left'
+     * - 'Right'
+     */
     positionOptions = [
         {
             label: 'Bottom',
@@ -38,6 +70,12 @@ export class DockScreen implements OnInit {
         }
     ];
 
+    /**
+     * Angular lifecycle hook that is called after the component's data-bound properties have been initialized.
+     * 
+     * Initializes the `items` array with a list of dock items, each containing a label, router link, and icon URL.
+     * These items are used to render the dock menu in the component's template.
+     */
     ngOnInit() {
         this.items = [
             {

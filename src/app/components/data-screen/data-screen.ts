@@ -12,8 +12,22 @@ import { MatTabsModule } from '@angular/material/tabs';
   standalone: true,
   providers: [ToastService]
 })
+
 export class DataScreen {
+  /**
+   * Creates an instance of the DataScreen component.
+   * @param toastService - Service used to display toast notifications.
+   */
   constructor(private toastService: ToastService) { }
+/**
+ * Triggers a toast notification with a predefined message.
+ *
+ * This method utilizes the `toastService` to emit a toast notification.
+ * It can be called to provide user feedback or alerts from this component.
+ *
+ * @remarks
+ * You can customize the message or extend the logic as needed.
+ */
 trigger() {
     // This method can be used to trigger a toast notification
     // You can implement the logic to show a toast here
